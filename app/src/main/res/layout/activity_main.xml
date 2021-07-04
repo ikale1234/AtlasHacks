@@ -4,61 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgblue"
     tools:context=".MainActivity">
-
-    <EditText
-        android:id="@+id/et_Item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:hint="@string/Item"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@id/btn_addItem"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_addItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Add Item"
-        app:backgroundTint="#F385AA"
-        app:layout_constraintEnd_toStartOf="@id/btn_findFood"
-        app:layout_constraintStart_toEndOf="@id/btn_removeItem"
-        app:layout_constraintTop_toBottomOf="@id/et_Item" />
 
     <ListView
         android:id="@+id/lv2"
-        android:layout_width="409dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="370dp"
         android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_addItem" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41">
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/et_Item"
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:background="@drawable/rect2"
+        android:ems="0"
+        android:hint="Item Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <Button
+        android:id="@+id/btn_addItem"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rect3"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936" />
 
     <Button
         android:id="@+id/btn_findFood"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rect5"
         android:text="Find"
-        app:backgroundTint="#9AC569"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_addItem"
-        app:layout_constraintTop_toTopOf="@+id/btn_addItem" />
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936" />
 
     <Button
         android:id="@+id/btn_removeItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remove Item"
-        app:backgroundTint="#F385AA"
-        app:layout_constraintEnd_toStartOf="@+id/btn_addItem"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rect3"
+        android:text="Remove"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_addItem" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="457dp"
+        android:layout_height="166dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/rect1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="400dp"
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/food4thought2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="140dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134"
+        app:srcCompat="@drawable/home2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
