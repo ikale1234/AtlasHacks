@@ -4,17 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scaleX="3"
-    android:scaleY="3"
+    android:background="@drawable/gradientbg"
+    android:scaleX="1"
+    android:scaleY="1"
     tools:context=".Foods">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="WOW "
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/title"
+        android:layout_width="316dp"
+        android:layout_height="65dp"
+        android:autoSizeTextType="uniform"
+        android:text="You Can Make:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lv2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 </androidx.constraintlayout.widget.ConstraintLayout>

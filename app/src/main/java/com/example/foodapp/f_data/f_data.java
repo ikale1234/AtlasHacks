@@ -149,6 +149,10 @@ public class f_data {
             get(15).add("Chicken");
             get(15).add("Garlic");
             get(15).add("Coriander");
+            add(new ArrayList<>());
+            get(16).add("dummy");
+            get(16).add("i");
+
 
         }
     };
@@ -210,7 +214,7 @@ public class f_data {
             count = 0;
             for (int j = 1; j < food_data.get(i).size(); j++) {
                 for (int k = 0; k < ingredients.size(); k++) {
-                    if (food_data.get(i).get(j) == ingredients.get(k)) {
+                    if (food_data.get(i).get(j).equals(ingredients.get(k))) {
                         count++;
                     }
                 }

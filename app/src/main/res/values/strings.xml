@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Food Find</string>
     <string name="Item">Item</string>
+    <string name="title">You Can Make:</string>
 </resources>
