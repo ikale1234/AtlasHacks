@@ -1,4 +1,6 @@
 package com.example.foodapp.f_data;
+import com.example.foodapp.R;
+
 import java.util.ArrayList;
 
 public class f_data {
@@ -156,7 +158,8 @@ public class f_data {
 
         }
     };
-
+    public static String[] food_list = {"dummy","Pizza"};
+    public static int[] img_list = {R.drawable.bgblue,R.drawable.pizza};
     // Input an arraylist of ingredients, output will be an arraylist of the
     // possible foods made with those ingredients
     public static ArrayList<String> availableFoods(ArrayList<String> ingredients) {
@@ -240,6 +243,17 @@ public class f_data {
             }
         }
         return ings;
+    }
+    public static int[] getImages(String[] Foods){
+        int[] images = new int[Foods.length];
+        for (int i =0 ; i <Foods.length;i++){
+            for (int j =0; j < food_list.length; j++){
+                if(Foods[i].equals(food_list[j])){
+                    images[i]=img_list[j];
+                }
+            }
+        }
+        return images;
     }
 
 
