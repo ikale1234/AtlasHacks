@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"white\">"+ getString(R.string.app_name)+ "</font>"));
+//        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"white\">"+ getString(R.string.app_name)+ "</font>"));
         item =findViewById(R.id.et_Item);
         addItem = findViewById(R.id.btn_addItem);
         list = findViewById(R.id.lv2);
