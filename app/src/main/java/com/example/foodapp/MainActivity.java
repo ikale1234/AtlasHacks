@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-
+import com.example.foodapp.f_data.f_data;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 arrayList.add(item.getText().toString());
                 adapter.notifyDataSetChanged();
                 item.getText().clear();
+
             }
         });
         removeItem.setOnClickListener(new View.OnClickListener() {
