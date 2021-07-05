@@ -8,7 +8,10 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -40,6 +43,7 @@ public class Foods extends AppCompatActivity {
             Foods[i] = foods.get(i);
         }
         int [] images = f_data.getImages(Foods);
+        String [] urls = f_data.getLinks(Foods);
         GridAdapter gridAdapter = new GridAdapter(Foods.this, Foods, images);
         gridView.setAdapter(gridAdapter);
 
@@ -47,11 +51,13 @@ public class Foods extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(Foods.this, "You clicked on " + Foods[position], Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(urls[position]));
+                startActivity(intent);
             }
         });
 
 
-        Toast.makeText(this, Arrays.toString(Foods), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, Arrays.toString(Foods), Toast.LENGTH_SHORT).show();
 //        adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, foods);
 //        list.setAdapter(adapter);
 
@@ -67,4 +73,5 @@ public class Foods extends AppCompatActivity {
         }
 
     }
+
 }

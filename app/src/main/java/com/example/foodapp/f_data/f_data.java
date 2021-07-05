@@ -151,15 +151,16 @@ public class f_data {
             get(15).add("Chicken");
             get(15).add("Garlic");
             get(15).add("Coriander");
-            add(new ArrayList<>());
-            get(16).add("dummy");
-            get(16).add("i");
+
 
 
         }
     };
-    public static String[] food_list = {"dummy","Pizza"};
-    public static int[] img_list = {R.drawable.bgblue,R.drawable.pizza};
+    public static String[] food_list = {"Pizza", "Cheeseburger", "Cake","Fried Rice", "Fries", "Chicken Curry", "Fried Chicken",  "Quesadilla", "Donuts", "Lasagna", "Pho", "French Toast",
+            "Taco","Sushi", "Burrito", "Pancakes",  };
+    public static int[] img_list = {R.drawable.pizza, R.drawable.cheeseburger,R.drawable.cake ,R.drawable.friedrice ,R.drawable.fries ,R.drawable.chickencurry,R.drawable.friedchicken,R.drawable.quesa,R.drawable.donuts,R.drawable.lasgna, R.drawable.pho,R.drawable.frenchtoast,R.drawable.taco,R.drawable.sushi,R.drawable.burrito,R.drawable.pancakes };
+    public static String[] url_list = {"https://www.youtube.com/watch?v=sv3TXMSv6Lw", "https://www.youtube.com/watch?v=Xk4AqwM0gxM", "https://www.youtube.com/watch?v=qtlhdIfojmc","https://www.youtube.com/watch?v=WYh2Ju4MfYE", "https://www.youtube.com/watch?v=hrozhYx_mQE", "https://www.youtube.com/watch?v=jwyge5daKUQ", "https://www.youtube.com/watch?v=hOTihLk4pfg",  "https://www.youtube.com/watch?v=E0G5Y2SOW0c", "https://www.youtube.com/watch?v=w6TxH8ha8XU", "https://www.youtube.com/watch?v=w8QjQL-LWGE", "https://www.youtube.com/watch?v=yslkYSjAPh4", "https://www.youtube.com/watch?v=r1ZLSbQ0r0I",
+            "https://www.youtube.com/watch?v=qL6ml7x56p4","https://www.youtube.com/watch?v=joweUxpHaqc", "https://www.youtube.com/watch?v=n76noIAaAuY", "https://www.youtube.com/watch?v=FLd00Bx4tOk"  };
     // Input an arraylist of ingredients, output will be an arraylist of the
     // possible foods made with those ingredients
     public static ArrayList<String> availableFoods(ArrayList<String> ingredients) {
@@ -249,11 +250,23 @@ public class f_data {
         for (int i =0 ; i <Foods.length;i++){
             for (int j =0; j < food_list.length; j++){
                 if(Foods[i].equals(food_list[j])){
+
                     images[i]=img_list[j];
                 }
             }
         }
         return images;
+    }
+    public static String[] getLinks(String[] Foods){
+        String[] urls = new String[Foods.length];
+        for (int i =0 ; i <Foods.length;i++){
+            for (int j =0; j < food_list.length; j++){
+                if(Foods[i].equals(food_list[j])){
+                    urls[i]=url_list[j];
+                }
+            }
+        }
+        return urls;
     }
 
 
